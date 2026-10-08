@@ -1,0 +1,2544 @@
+
+/* =========================================================
+   BIRTHDAY WEBSITE
+   SOFT PINK × BABY BLUE × LILY FLOWER
+========================================================= */
+
+
+/* =========================
+   RESET
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "DM Sans", sans-serif;
+    background: #fdfaff;
+    color: #4d5575;
+    overflow-x: hidden;
+}
+
+button,
+a {
+    font-family: inherit;
+}
+
+button {
+    border: none;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+
+/* =========================
+   COLOR VARIABLES
+========================= */
+
+:root {
+
+    /* Pink */
+    --pink: #f5a9c7;
+    --pink-soft: #ffe5ef;
+    --pink-light: #fff2f7;
+    --pink-dark: #d985aa;
+
+    /* Blue */
+    --blue: #91bdf5;
+    --blue-soft: #e3f0ff;
+    --blue-light: #f1f7ff;
+    --blue-dark: #668fc9;
+
+    /* Purple */
+    --purple: #b8a8e8;
+    --purple-soft: #eee9ff;
+
+    /* Other */
+    --cream: #fffaf5;
+    --white: #ffffff;
+
+    --text: #505a78;
+    --text-dark: #3e4868;
+    --muted: #8b94aa;
+
+    --shadow:
+        0 25px 70px rgba(119, 143, 190, 0.14);
+}
+
+
+/* =========================================================
+   BACKGROUND DECORATION
+========================================================= */
+
+.background-decoration {
+    position: fixed;
+    inset: 0;
+
+    pointer-events: none;
+
+    overflow: hidden;
+
+    z-index: 0;
+}
+
+
+/* Soft blobs */
+
+.shape {
+    position: absolute;
+
+    border-radius: 50%;
+
+    filter: blur(4px);
+
+    opacity: .55;
+}
+
+.shape-1 {
+    width: 230px;
+    height: 230px;
+
+    top: -80px;
+    left: -70px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffd4e5,
+            #ffeaf3
+        );
+}
+
+.shape-2 {
+    width: 220px;
+    height: 220px;
+
+    top: 15%;
+    right: -80px;
+
+    background:
+        radial-gradient(
+            circle,
+            #cce4ff,
+            #eaf4ff
+        );
+}
+
+.shape-3 {
+    width: 160px;
+    height: 160px;
+
+    left: 5%;
+    bottom: 5%;
+
+    background:
+        radial-gradient(
+            circle,
+            #d8d0ff,
+            #f0ecff
+        );
+}
+
+.shape-4 {
+    width: 190px;
+    height: 190px;
+
+    right: 5%;
+    bottom: -70px;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffdce9,
+            #fff0f6
+        );
+}
+
+
+/* Stars */
+
+.star {
+    position: absolute;
+
+    color: #9ab8e6;
+
+    font-size: 25px;
+
+    opacity: .7;
+
+    animation:
+        twinkle 3s ease-in-out infinite alternate;
+}
+
+.star-1 {
+    top: 13%;
+    left: 17%;
+}
+
+.star-2 {
+    top: 28%;
+    right: 17%;
+
+    color: #e4a8c3;
+}
+
+.star-3 {
+    bottom: 23%;
+    left: 13%;
+
+    color: #a89bdc;
+}
+
+.star-4 {
+    bottom: 15%;
+    right: 12%;
+}
+
+/* =========================================================
+   SOFT TULIP DECORATION 🌷
+========================================================= */
+
+/* Tulip kiri */
+.background-decoration::before {
+    content: "🌷";
+
+    position: absolute;
+
+    left: 15px;
+    top: 38%;
+
+    font-size: 95px;
+
+    opacity: .75;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(120, 145, 190, .15)
+        );
+
+    transform: rotate(-12deg);
+
+    animation:
+        tulipFloat 5s ease-in-out infinite;
+}
+
+
+/* Tulip kanan */
+.background-decoration::after {
+    content: "🌷";
+
+    position: absolute;
+
+    right: 10px;
+    bottom: 25%;
+
+    font-size: 85px;
+
+    opacity: .65;
+
+    filter:
+        drop-shadow(
+            0 8px 12px
+            rgba(120, 145, 190, .15)
+        );
+
+    transform: rotate(15deg);
+
+    animation:
+        tulipFloatReverse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TULIP DI OPENING
+========================================================= */
+
+.opening::before {
+    content: "🌷";
+
+    position: absolute;
+
+    left: -20px;
+    bottom: -20px;
+
+    font-size: 150px;
+
+    opacity: .45;
+
+    transform: rotate(-20deg);
+
+    filter:
+        drop-shadow(
+            0 10px 15px
+            rgba(120, 145, 190, .15)
+        );
+
+    animation:
+        tulipFloat 5s ease-in-out infinite;
+}
+
+
+.opening::after {
+    content: "🌷";
+
+    position: absolute;
+
+    right: -15px;
+    top: 20px;
+
+    font-size: 130px;
+
+    opacity: .4;
+
+    transform: rotate(20deg);
+
+    filter:
+        drop-shadow(
+            0 10px 15px
+            rgba(120, 145, 190, .15)
+        );
+
+    animation:
+        tulipFloatReverse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TULIP DI SURPRISE BOX
+========================================================= */
+
+.surprise-box::before {
+    content: "🌷";
+
+    position: absolute;
+
+    left: -20px;
+    bottom: -30px;
+
+    font-size: 130px;
+
+    opacity: .28;
+
+    transform: rotate(-20deg);
+
+    animation:
+        tulipFloat 5s ease-in-out infinite;
+}
+
+
+.surprise-box::after {
+    content: "🌷";
+
+    position: absolute;
+
+    right: -15px;
+    top: -25px;
+
+    font-size: 110px;
+
+    opacity: .25;
+
+    transform: rotate(20deg);
+
+    animation:
+        tulipFloatReverse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TULIP DI FINAL SECTION
+========================================================= */
+
+.final-section::before {
+    content: "🌷";
+
+    position: absolute;
+
+    left: -25px;
+    bottom: -50px;
+
+    font-size: 180px;
+
+    opacity: .14;
+
+    transform: rotate(-20deg);
+
+    animation:
+        tulipFloat 5s ease-in-out infinite;
+}
+
+
+.final-section::after {
+    content: "🌷";
+
+    position: absolute;
+
+    right: -20px;
+    top: -45px;
+
+    font-size: 160px;
+
+    opacity: .14;
+
+    transform: rotate(20deg);
+
+    animation:
+        tulipFloatReverse 6s ease-in-out infinite;
+}
+
+
+/* =========================================================
+   TULIP ANIMATION
+========================================================= */
+
+@keyframes tulipFloat {
+
+    0%,
+    100% {
+        transform:
+            rotate(-12deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(-7deg)
+            translateY(-12px);
+    }
+}
+
+
+@keyframes tulipFloatReverse {
+
+    0%,
+    100% {
+        transform:
+            rotate(15deg)
+            translateY(0);
+    }
+
+    50% {
+        transform:
+            rotate(9deg)
+            translateY(-15px);
+    }
+}
+
+
+/* =========================================================
+   OPENING
+========================================================= */
+
+.opening {
+    min-height: 100vh;
+
+    display: flex;
+
+    justify-content: center;
+    align-items: center;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 192, 214, .55),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 85% 25%,
+            rgba(167, 208, 255, .6),
+            transparent 32%
+        ),
+
+        radial-gradient(
+            circle at 50% 100%,
+            rgba(221, 210, 250, .45),
+            transparent 35%
+        ),
+
+        linear-gradient(
+            135deg,
+            #fff5f9,
+            #f2f8ff,
+            #fff8fb
+        );
+}
+
+
+/* Lily decorative opening */
+
+.opening::before {
+
+    position: absolute;
+
+    font-size: 190px;
+
+    left: -55px;
+    bottom: -40px;
+
+    color: rgba(244, 174, 201, .32);
+
+    transform: rotate(-20deg);
+}
+
+.opening::after {
+    content: "❀";
+
+    position: absolute;
+
+    font-size: 150px;
+
+    right: -35px;
+    top: -20px;
+
+    color: rgba(157, 193, 239, .35);
+
+    transform: rotate(25deg);
+}
+
+
+.opening-content {
+    text-align: center;
+
+    max-width: 680px;
+
+    padding: 40px 25px;
+
+    position: relative;
+
+    z-index: 2;
+
+    animation:
+        fadeUp 1s ease;
+}
+
+
+/* Small label */
+
+.mini-label {
+    display: inline-block;
+
+    padding: 10px 20px;
+
+    background:
+        rgba(255, 255, 255, .75);
+
+    border:
+        1px solid rgba(255, 255, 255, .9);
+
+    border-radius: 100px;
+
+    font-size: 13px;
+
+    font-weight: 600;
+
+    color: #7197ca;
+
+    box-shadow:
+        0 10px 30px
+        rgba(116, 151, 204, .1);
+
+    margin-bottom: 25px;
+}
+
+
+/* Cake */
+
+.cake-icon {
+    font-size: 78px;
+
+    margin-bottom: 12px;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+/* Opening title */
+
+.opening h1 {
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(65px, 10vw, 120px);
+
+    line-height: .85;
+
+    color: #4d5879;
+
+    letter-spacing: -5px;
+}
+
+.opening h1 span {
+
+    background:
+        linear-gradient(
+            90deg,
+            #78a9e5 0%,
+            #a69add 45%,
+            #e49ab9 100%
+        );
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+
+    color: transparent;
+}
+
+
+.opening-name {
+    margin-top: 32px;
+
+    font-size: 20px;
+
+    color: #7d87a0;
+}
+
+.opening-name strong {
+    color: #d484a9;
+}
+
+
+.opening-description {
+    margin:
+        12px auto 30px;
+
+    max-width: 470px;
+
+    line-height: 1.8;
+
+    color: #9199ad;
+}
+
+
+/* Main button */
+
+.main-button {
+
+    display: inline-flex;
+
+    align-items: center;
+
+    gap: 18px;
+
+    padding:
+        16px 27px;
+
+    color: white;
+
+    border-radius: 100px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8fb9ef,
+            #b09de2,
+            #e3a0bd
+        );
+
+    box-shadow:
+        0 15px 35px
+        rgba(141, 163, 220, .3);
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+.main-button:hover {
+
+    transform:
+        translateY(-4px);
+
+    box-shadow:
+        0 20px 40px
+        rgba(141, 163, 220, .4);
+}
+
+.main-button span {
+    font-size: 20px;
+}
+
+
+/* =========================================================
+   MAIN
+========================================================= */
+
+.hidden {
+    display: none;
+}
+
+.section {
+    padding:
+        120px 7%;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+/* =========================================================
+   HERO
+========================================================= */
+
+.hero {
+
+    min-height: 100vh;
+
+    display: flex;
+
+    align-items: center;
+
+    background:
+
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 213, 229, .55),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 90% 80%,
+            rgba(197, 224, 255, .65),
+            transparent 32%
+        ),
+
+        #fbfcff;
+}
+
+
+.hero-content {
+
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.1fr .9fr;
+
+    align-items: center;
+
+    gap: 80px;
+}
+
+
+/* Hero text */
+
+.eyebrow {
+
+    display: block;
+
+    color: #7d9fd1;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 18px;
+}
+
+
+.hero h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(48px, 6vw, 78px);
+
+    line-height: 1.05;
+
+    color: #4c5879;
+
+    letter-spacing: -2px;
+}
+
+
+.hero h2 span {
+
+    display: block;
+
+    background:
+        linear-gradient(
+            90deg,
+            #78a9e4,
+            #a49add,
+            #df99b8
+        );
+
+    color: transparent;
+
+    -webkit-background-clip: text;
+
+    background-clip: text;
+}
+
+
+.hero-text > p {
+
+    max-width: 570px;
+
+    margin:
+        25px 0;
+
+    color: #8992a8;
+
+    line-height: 1.8;
+
+    font-size: 16px;
+}
+
+
+/* Buttons */
+
+.hero-buttons {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    margin-top: 30px;
+}
+
+
+.primary-button,
+.secondary-button {
+
+    padding:
+        14px 22px;
+
+    border-radius: 100px;
+
+    font-weight: 700;
+
+    transition: .3s ease;
+}
+
+
+.primary-button {
+
+    color: white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #8db9ed,
+            #b29fe3,
+            #e2a0bd
+        );
+
+    box-shadow:
+        0 12px 25px
+        rgba(126, 155, 215, .25);
+}
+
+
+.primary-button:hover {
+
+    transform:
+        translateY(-3px);
+}
+
+
+.secondary-button {
+
+    color: #70809e;
+
+    border:
+        1px solid #e4e9f4;
+
+    background: white;
+}
+
+
+.secondary-button:hover {
+
+    background:
+        #fff2f7;
+
+    border-color:
+        #f1c5d8;
+}
+
+
+/* =========================================================
+   HERO BIRTHDAY CARD
+========================================================= */
+
+.hero-card {
+
+    display: flex;
+
+    justify-content: center;
+
+    position: relative;
+}
+
+
+.card-glow {
+
+    position: absolute;
+
+    width: 330px;
+
+    height: 330px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #bcdcff,
+            #ffd0e3
+        );
+
+    filter: blur(50px);
+
+    opacity: .55;
+}
+
+
+.birthday-card {
+
+    width: 340px;
+
+    min-height: 440px;
+
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.95),
+            rgba(250,247,255,.92)
+        );
+
+    border:
+        1px solid
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        0 30px 70px
+        rgba(127, 151, 200, .17);
+
+    transform:
+        rotate(2deg);
+
+    transition: .5s ease;
+}
+
+
+.birthday-card:hover {
+
+    transform:
+        rotate(0deg)
+        translateY(-8px);
+}
+
+
+.card-small {
+
+    color: #82a5d6;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    font-weight: 800;
+}
+
+
+.big-cake {
+
+    font-size: 100px;
+
+    margin:
+        25px 0;
+
+    animation:
+        floating 3s ease-in-out infinite;
+}
+
+
+.birthday-card h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 35px;
+
+    color: #536080;
+}
+
+
+.birthday-card p {
+
+    color: #9099ae;
+
+    line-height: 1.6;
+
+    margin-top: 10px;
+}
+
+
+.card-stars {
+
+    margin-top: 25px;
+
+    color: #d895b5;
+
+    letter-spacing: 8px;
+}
+
+
+/* =========================================================
+   SECTION HEADINGS
+========================================================= */
+
+.section-heading {
+
+    max-width: 1200px;
+
+    margin:
+        0 auto 55px;
+}
+
+
+.section-heading.center {
+
+    text-align: center;
+}
+
+
+.section-heading h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(40px, 5vw, 65px);
+
+    line-height: 1.05;
+
+    color: #4d5879;
+}
+
+
+.section-heading h2 span {
+
+    color: #82a5d6;
+}
+
+
+/* =========================================================
+   MESSAGE
+========================================================= */
+
+.message {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fffafd,
+            #f5f9ff
+        );
+}
+
+
+.letter {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 60px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffffff,
+            #fff8fb,
+            #f7fbff
+        );
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 25px 70px
+        rgba(133, 154, 196, .13);
+
+    border:
+        1px solid #f1edf4;
+
+    position: relative;
+}
+
+
+.letter::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 5px;
+
+    left: 25px;
+
+    top: 35px;
+
+    bottom: 35px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            #91bff1,
+            #bca9e5,
+            #efa7c3
+        );
+}
+
+
+.letter-top {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 5px;
+
+    margin-bottom: 30px;
+}
+
+
+.letter-top span {
+
+    color: #9ba3b5;
+}
+
+
+.letter-top strong {
+
+    color: #d58dab;
+
+    font-size: 20px;
+}
+
+
+.letter-content p {
+
+    color: #7f889d;
+
+    line-height: 1.9;
+
+    margin-bottom: 18px;
+}
+
+
+.letter-content p:first-child {
+
+    font-size: 24px;
+
+    color: #536080;
+
+    font-family:
+        "Playfair Display",
+        serif;
+}
+
+
+.closing {
+
+    color: #7399cd !important;
+
+    font-weight: 600;
+}
+
+
+.letter-signature {
+
+    margin-top: 40px;
+
+    color: #8993a8;
+
+    line-height: 1.7;
+}
+
+
+.letter-signature strong {
+
+    color: #d18ba9;
+}
+
+
+/* =========================================================
+   WISHES
+========================================================= */
+
+.wishes {
+
+    background:
+        linear-gradient(
+            180deg,
+            #f4f9ff,
+            #fff6fa
+        );
+}
+
+
+.wish-grid {
+
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+
+.wish-card {
+
+    padding: 35px;
+
+    background:
+        rgba(255,255,255,.86);
+
+    border-radius: 28px;
+
+    border:
+        1px solid
+        rgba(255,255,255,.95);
+
+    box-shadow:
+        0 15px 40px
+        rgba(110, 138, 185, .09);
+
+    transition: .3s ease;
+}
+
+
+.wish-card:nth-child(1) {
+
+    border-top:
+        4px solid #a9cdf5;
+}
+
+
+.wish-card:nth-child(2) {
+
+    border-top:
+        4px solid #c0b2eb;
+}
+
+
+.wish-card:nth-child(3) {
+
+    border-top:
+        4px solid #f1b1cb;
+}
+
+
+.wish-card:hover {
+
+    transform:
+        translateY(-7px);
+}
+
+
+.wish-icon {
+
+    width: 60px;
+
+    height: 60px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    font-size: 28px;
+
+    margin-bottom: 25px;
+}
+
+
+.wish-icon.blue {
+
+    background:
+        #e3f0ff;
+}
+
+
+.wish-icon.purple {
+
+    background:
+        #eee9ff;
+}
+
+
+.wish-icon.pink {
+
+    background:
+        #ffe6f0;
+}
+
+
+.wish-card h3 {
+
+    color: #526080;
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+}
+
+
+.wish-card p {
+
+    color: #8b94a8;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   MEMORIES
+========================================================= */
+
+.memories {
+
+    background:
+        #ffffff;
+}
+
+
+.gallery {
+
+    max-width: 1150px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        1.4fr .8fr .8fr;
+
+    gap: 20px;
+}
+
+
+.photo {
+
+    height: 330px;
+
+    border-radius: 28px;
+
+    overflow: hidden;
+
+    position: relative;
+
+    background:
+        #edf4ff;
+
+    box-shadow:
+        0 15px 35px
+        rgba(100, 125, 175, .12);
+}
+
+
+.photo-large {
+
+    height: 500px;
+
+    grid-row:
+        span 2;
+}
+
+
+.photo img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+    transition:
+        .5s ease;
+}
+
+
+.photo:hover img {
+
+    transform:
+        scale(1.07);
+}
+
+
+.photo-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: flex-end;
+
+    padding: 25px;
+
+    background:
+        linear-gradient(
+            transparent 35%,
+            rgba(48, 66, 105, .62)
+        );
+
+    color: white;
+}
+
+
+.photo-overlay span {
+
+    font-size: 12px;
+
+    opacity: .8;
+
+    letter-spacing: 2px;
+}
+
+
+.photo-overlay p {
+
+    margin-top: 5px;
+
+    font-weight: 700;
+}
+
+
+.gallery-note {
+
+    text-align: center;
+
+    margin-top: 25px;
+
+    color: #9ba3b4;
+
+    font-size: 13px;
+}
+
+
+/* =========================================================
+   TIMELINE
+========================================================= */
+
+.timeline-section {
+
+    background:
+        linear-gradient(
+            135deg,
+            #f0f7ff,
+            #fff4fa
+        );
+}
+
+
+.timeline {
+
+    max-width: 800px;
+
+    margin: auto;
+
+    position: relative;
+}
+
+
+.timeline::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 31px;
+
+    top: 20px;
+
+    bottom: 20px;
+
+    width: 2px;
+
+    background:
+        linear-gradient(
+            #9dc5f2,
+            #c2b1e8,
+            #edabc7
+        );
+}
+
+
+.timeline-item {
+
+    display: grid;
+
+    grid-template-columns:
+        65px 1fr;
+
+    gap: 25px;
+
+    position: relative;
+
+    margin-bottom: 45px;
+}
+
+
+.timeline-dot {
+
+    width: 64px;
+
+    height: 64px;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background: white;
+
+    border:
+        2px solid #abc9ed;
+
+    color: #6f96c9;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    position: relative;
+
+    z-index: 2;
+
+    box-shadow:
+        0 8px 20px
+        rgba(110, 140, 190, .1);
+}
+
+
+.timeline-content {
+
+    padding:
+        5px 0;
+}
+
+
+.timeline-content span {
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    color: #a1a8b8;
+
+    font-weight: 700;
+}
+
+
+.timeline-content h3 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 27px;
+
+    color: #536080;
+
+    margin:
+        8px 0;
+}
+
+
+.timeline-content p {
+
+    color: #8b94a8;
+
+    line-height: 1.7;
+}
+
+
+/* =========================================================
+   SURPRISE
+========================================================= */
+
+.surprise {
+
+    background:
+        #ffffff;
+}
+
+
+.surprise-box {
+
+    max-width: 850px;
+
+    margin: auto;
+
+    padding:
+        70px 40px;
+
+    text-align: center;
+
+    border-radius: 40px;
+
+    position: relative;
+
+    overflow: hidden;
+
+    background:
+        linear-gradient(
+            135deg,
+            #eaf5ff,
+            #f4edff,
+            #fff0f7
+        );
+
+    box-shadow:
+        0 30px 70px
+        rgba(120, 143, 190, .15);
+}
+
+
+/* Lily inside surprise */
+
+.surprise-box::before {
+
+    content: "❀";
+
+    position: absolute;
+
+    left: -30px;
+
+    bottom: -45px;
+
+    font-size: 180px;
+
+    color:
+        rgba(241, 166, 195, .25);
+
+    transform:
+        rotate(-25deg);
+}
+
+
+.surprise-box::after {
+
+    content: "❀";
+
+    position: absolute;
+
+    right: -20px;
+
+    top: -40px;
+
+    font-size: 150px;
+
+    color:
+        rgba(153, 190, 235, .25);
+
+    transform:
+        rotate(20deg);
+}
+
+
+.surprise-decoration {
+
+    position: absolute;
+
+    font-size: 200px;
+
+    opacity: .06;
+
+    top: -80px;
+
+    right: -50px;
+}
+
+
+.surprise-box h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(38px, 5vw, 60px);
+
+    color: #526080;
+
+    line-height: 1.1;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.surprise-box > p {
+
+    color: #8e97a9;
+
+    margin:
+        15px 0 25px;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.gift-button {
+
+    width: 100px;
+
+    height: 100px;
+
+    border-radius: 30px;
+
+    background:
+        rgba(255,255,255,.95);
+
+    font-size: 50px;
+
+    box-shadow:
+        0 15px 30px
+        rgba(93, 121, 172, .15);
+
+    transition: .4s ease;
+
+    animation:
+        giftFloat 2s infinite;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.gift-button:hover {
+
+    transform:
+        scale(1.08)
+        rotate(5deg);
+}
+
+
+.gift-message {
+
+    max-width: 550px;
+
+    margin:
+        30px auto 0;
+
+    padding: 30px;
+
+    background:
+        rgba(255,255,255,.82);
+
+    border-radius: 28px;
+
+    display: none;
+
+    animation:
+        fadeUp .7s ease;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.gift-message.show {
+
+    display: block;
+}
+
+
+.gift-confetti {
+
+    font-size: 24px;
+
+    margin-bottom: 15px;
+}
+
+
+.gift-message h3 {
+
+    color: #769fd2;
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size: 24px;
+
+    margin-bottom: 12px;
+}
+
+
+.gift-message p {
+
+    color: #8b94a8;
+
+    line-height: 1.7;
+
+    margin-bottom: 15px;
+}
+
+
+.gift-message strong {
+
+    color: #d789aa;
+}
+
+
+/* =========================================================
+   FINAL
+========================================================= */
+
+.final-section {
+
+    padding:
+        140px 7%;
+
+    text-align: center;
+
+    color: white;
+
+    background:
+
+        radial-gradient(
+            circle at 15% 20%,
+            rgba(255, 191, 215, .35),
+            transparent 30%
+        ),
+
+        radial-gradient(
+            circle at 85% 80%,
+            rgba(174, 211, 255, .35),
+            transparent 30%
+        ),
+
+        linear-gradient(
+            135deg,
+            #789fce,
+            #9b8fc9,
+            #d28eae
+        );
+
+    position: relative;
+
+    overflow: hidden;
+}
+
+
+/* Lily final section */
+
+.final-section::before {
+
+    content: "❀";
+
+    position: absolute;
+
+    left: -40px;
+
+    bottom: -60px;
+
+    font-size: 220px;
+
+    color:
+        rgba(255,255,255,.12);
+
+    transform:
+        rotate(-20deg);
+}
+
+
+.final-section::after {
+
+    content: "❀";
+
+    position: absolute;
+
+    right: -30px;
+
+    top: -60px;
+
+    font-size: 190px;
+
+    color:
+        rgba(255,255,255,.12);
+
+    transform:
+        rotate(25deg);
+}
+
+
+.final-content {
+
+    max-width: 700px;
+
+    margin: auto;
+
+    position: relative;
+
+    z-index: 2;
+}
+
+
+.final-cake {
+
+    font-size: 70px;
+
+    animation:
+        floating 3s infinite;
+}
+
+
+.final-content > span {
+
+    display: block;
+
+    margin-top: 20px;
+
+    font-size: 11px;
+
+    letter-spacing: 4px;
+
+    opacity: .8;
+}
+
+
+.final-content h2 {
+
+    font-family:
+        "Playfair Display",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 70px);
+
+    line-height: 1.05;
+
+    margin:
+        20px 0;
+}
+
+
+.final-content p {
+
+    max-width: 500px;
+
+    margin: auto;
+
+    line-height: 1.8;
+
+    opacity: .85;
+}
+
+
+.final-stars {
+
+    margin-top: 35px;
+
+    letter-spacing: 12px;
+
+    opacity: .85;
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        25px 7%;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background:
+        #526c9c;
+
+    color:
+        #e5edf9;
+
+    font-size: 13px;
+}
+
+
+footer strong {
+
+    color: white;
+}
+
+
+footer span {
+
+    opacity: .7;
+}
+
+
+/* =========================================================
+   MUSIC BUTTON
+========================================================= */
+
+.music-button {
+
+    position: fixed;
+
+    right: 25px;
+
+    bottom: 25px;
+
+    width: 52px;
+
+    height: 52px;
+
+    border-radius: 50%;
+
+    z-index: 100;
+
+    background:
+        rgba(255,255,255,.95);
+
+    color: #779ed0;
+
+    box-shadow:
+        0 10px 30px
+        rgba(70, 100, 150, .2);
+
+    font-size: 20px;
+
+    transition: .3s ease;
+
+    border:
+        1px solid #eef2fa;
+}
+
+
+.music-button:hover {
+
+    transform:
+        scale(1.1);
+}
+
+
+.music-button.playing {
+
+    animation:
+        musicPulse 1.2s infinite;
+}
+
+
+/* =========================================================
+   CONFETTI
+========================================================= */
+
+#confettiContainer {
+
+    position: fixed;
+
+    inset: 0;
+
+    pointer-events: none;
+
+    z-index: 999;
+}
+
+
+.confetti {
+
+    position: absolute;
+
+    top: -20px;
+
+    width: 9px;
+
+    height: 14px;
+
+    opacity: .9;
+
+    animation:
+        confettiFall 3s linear forwards;
+}
+
+
+/* =========================================================
+   ANIMATIONS
+========================================================= */
+
+@keyframes fadeUp {
+
+    from {
+
+        opacity: 0;
+
+        transform:
+            translateY(30px);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            translateY(0);
+    }
+}
+
+
+@keyframes floating {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-12px);
+    }
+}
+
+
+@keyframes giftFloat {
+
+    0%,
+    100% {
+
+        transform:
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            translateY(-8px)
+            rotate(2deg);
+    }
+}
+
+
+@keyframes twinkle {
+
+    from {
+
+        opacity: .3;
+
+        transform:
+            scale(.8)
+            rotate(0deg);
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform:
+            scale(1.2)
+            rotate(20deg);
+    }
+}
+
+
+@keyframes lilyFloat {
+
+    0%,
+    100% {
+
+        transform:
+            rotate(-18deg)
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            rotate(-12deg)
+            translateY(-12px);
+    }
+}
+
+
+@keyframes lilyFloatReverse {
+
+    0%,
+    100% {
+
+        transform:
+            rotate(20deg)
+            translateY(0);
+    }
+
+    50% {
+
+        transform:
+            rotate(14deg)
+            translateY(-15px);
+    }
+}
+
+
+@keyframes musicPulse {
+
+    0% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(130, 169, 220, .35);
+    }
+
+    70% {
+
+        box-shadow:
+            0 0 0 12px
+            rgba(130, 169, 220, 0);
+    }
+
+    100% {
+
+        box-shadow:
+            0 0 0 0
+            rgba(130, 169, 220, 0);
+    }
+}
+
+
+@keyframes confettiFall {
+
+    0% {
+
+        transform:
+            translateY(-20px)
+            rotate(0deg);
+    }
+
+    100% {
+
+        transform:
+            translateY(110vh)
+            rotate(720deg);
+    }
+}
+
+
+/* =========================================================
+   RESPONSIVE
+========================================================= */
+
+@media (max-width: 900px) {
+
+    .hero-content {
+
+        grid-template-columns: 1fr;
+
+        gap: 60px;
+
+        text-align: center;
+    }
+
+
+    .hero-text > p {
+
+        margin-left: auto;
+
+        margin-right: auto;
+    }
+
+
+    .hero-buttons {
+
+        justify-content: center;
+    }
+
+
+    .hero-card {
+
+        margin-top: 10px;
+    }
+
+
+    .wish-grid {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr 1fr;
+    }
+
+
+    .photo-large {
+
+        grid-column:
+            span 2;
+
+        height: 450px;
+    }
+}
+
+
+@media (max-width: 600px) {
+
+    .section {
+
+        padding:
+            80px 6%;
+    }
+
+
+    .opening h1 {
+
+        font-size:
+            65px;
+
+        letter-spacing:
+            -3px;
+    }
+
+
+    .cake-icon {
+
+        font-size:
+            65px;
+    }
+
+
+    .opening::before {
+
+        font-size:
+            120px;
+    }
+
+
+    .opening::after {
+
+        font-size:
+            100px;
+    }
+
+
+    .hero {
+
+        min-height:
+            auto;
+
+        padding-top:
+            120px;
+    }
+
+
+    .hero h2 {
+
+        font-size:
+            47px;
+    }
+
+
+    .hero-buttons {
+
+        flex-direction:
+            column;
+    }
+
+
+    .primary-button,
+    .secondary-button {
+
+        width:
+            100%;
+
+        text-align:
+            center;
+    }
+
+
+    .birthday-card {
+
+        width:
+            100%;
+
+        max-width:
+            320px;
+
+        min-height:
+            400px;
+    }
+
+
+    .letter {
+
+        padding:
+            40px 30px;
+    }
+
+
+    .letter::before {
+
+        left:
+            12px;
+    }
+
+
+    .gallery {
+
+        grid-template-columns:
+            1fr;
+    }
+
+
+    .photo,
+    .photo-large {
+
+        grid-column:
+            auto;
+
+        height:
+            320px;
+    }
+
+
+    .timeline-item {
+
+        grid-template-columns:
+            50px 1fr;
+
+        gap:
+            18px;
+    }
+
+
+    .timeline-dot {
+
+        width:
+            50px;
+
+        height:
+            50px;
+    }
+
+
+    .timeline::before {
+
+        left:
+            24px;
+    }
+
+
+    .timeline-content h3 {
+
+        font-size:
+            22px;
+    }
+
+
+    .surprise-box {
+
+        padding:
+            60px 25px;
+    }
+
+
+    footer {
+
+        flex-direction:
+            column;
+
+        text-align:
+            center;
+    }
+
+
+    .background-decoration::before {
+
+        font-size:
+            75px;
+    }
+
+
+    .background-decoration::after {
+
+        font-size:
+            65px;
+    }
+}

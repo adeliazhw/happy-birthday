@@ -1,0 +1,583 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Birthday ✨</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- BACKGROUND DECORATION -->
+    <div class="background-decoration">
+        <span class="shape shape-1"></span>
+        <span class="shape shape-2"></span>
+        <span class="shape shape-3"></span>
+        <span class="shape shape-4"></span>
+        <span class="star star-1">✦</span>
+        <span class="star star-2">✧</span>
+        <span class="star star-3">✦</span>
+        <span class="star star-4">✧</span>
+    </div>
+
+    <!-- MUSIC -->
+    <audio id="birthdayMusic" loop>
+        <source src="assets\Katy Perry - Birthday (Lyric Video).mp3" type="audio/mpeg">
+    </audio>
+
+    <button class="music-button" id="musicButton" onclick="toggleMusic()">
+        ♫
+    </button>
+
+
+    <!-- ================= OPENING ================= -->
+
+    <section class="opening" id="opening">
+
+        <div class="opening-content">
+
+            <div class="mini-label">
+                ✨ A little surprise for you
+            </div>
+
+            <div class="cake-icon">
+                🎂
+            </div>
+
+            <h1>
+                Happy<br>
+                <span>Birthday!</span>
+            </h1>
+
+            <p class="opening-name">
+                Untuk <strong>SAYANG</strong> 💙
+            </p>
+
+            <p class="opening-description">
+                Ada sesuatu yang sudah disiapkan khusus untuk hari spesialmu.
+            </p>
+
+            <button class="main-button" onclick="openBirthday()">
+                Buka Kejutan
+                <span>→</span>
+            </button>
+
+        </div>
+
+    </section>
+
+
+    <!-- ================= MAIN WEBSITE ================= -->
+
+    <main id="mainContent" class="hidden">
+
+
+        <!-- HERO -->
+
+        <section class="hero section">
+
+            <div class="hero-content">
+
+                <div class="hero-text">
+
+                    <span class="eyebrow">
+                        ✦ TODAY IS YOUR SPECIAL DAY
+                    </span>
+
+                    <h2>
+                        Happy Birthday,
+                        <span>SAYANG!</span>
+                    </h2>
+
+                    <p>
+                        Hari ini bukan cuma tentang bertambahnya usia,
+                        tapi tentang merayakan perjalanan, cerita,
+                        dan semua hal indah yang sudah kamu lewati.
+                    </p>
+
+                    <div class="hero-buttons">
+
+                        <a href="#message" class="primary-button">
+                            Baca Ucapan
+                            <span>↓</span>
+                        </a>
+
+                        <a href="#memories" class="secondary-button">
+                            MUACH
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+                <div class="hero-card">
+
+                    <div class="card-glow"></div>
+
+                    <div class="birthday-card">
+
+                        <span class="card-small">
+                            SPECIAL DAY
+                        </span>
+
+                        <div class="big-cake">
+                            🎂
+                        </div>
+
+                        <h3>
+                            Make a wish
+                        </h3>
+
+                        <p>
+                            May your dreams<br>
+                            become beautiful memories.
+                        </p>
+
+                        <div class="card-stars">
+                            ✦ ✧ ✦
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MESSAGE -->
+
+        <section class="message section" id="message">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    💌 A MESSAGE FOR YOU
+                </span>
+
+                <h2>
+                    Sebuah ucapan<br>
+                    <span>untuk hari spesialmu</span>
+                </h2>
+
+            </div>
+
+
+            <div class="letter">
+
+                <div class="letter-top">
+                    <span>Dear,</span>
+                    <strong>MIFTAH SAYANG</strong>
+                </div>
+
+                <div class="letter-content">
+
+                    <p>
+                        Selamat ulang tahun! 🎉
+                    </p>
+
+                    <p>
+                        Semoga di usia yang baru ini, kamu selalu
+                        dikelilingi oleh orang-orang yang menyayangimu,
+                        diberikan kesehatan, kebahagiaan, dan banyak
+                        alasan untuk tersenyum.
+                    </p>
+
+                    <p>
+                        Semoga semua hal yang sedang kamu perjuangkan
+                        perlahan menemukan jalannya. Jangan terlalu
+                        keras kepada dirimu sendiri. Kamu sudah melakukan
+                        yang terbaik sejauh ini.
+                    </p>
+
+                    <p>
+                        Terima kasih sudah menjadi seseorang yang begitu
+                        berarti. Semoga tahun ini membawa lebih banyak
+                        cerita indah, kesempatan baru, dan kejutan kecil
+                        yang membuatmu bahagia.
+                    </p>
+
+                    <p class="closing">
+                        Keep being yourself and keep shining. ✨
+                    </p>
+
+                </div>
+
+                <div class="letter-signature">
+                    With lots of love,<br>
+                    <strong>Someone who cares about you 💙</strong>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- WISHES -->
+
+        <section class="wishes section">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">
+                    ✨ BIRTHDAY WISHES
+                </span>
+
+                <h2>
+                    Three things I wish<br>
+                    <span>for you</span>
+                </h2>
+
+            </div>
+
+
+            <div class="wish-grid">
+
+                <div class="wish-card">
+
+                    <div class="wish-icon blue">
+                        🌷
+                    </div>
+
+                    <h3>
+                        Happiness
+                    </h3>
+
+                    <p>
+                        Semoga hari-harimu dipenuhi
+                        banyak alasan untuk tersenyum.
+                    </p>
+
+                </div>
+
+
+                <div class="wish-card">
+
+                    <div class="wish-icon purple">
+                        ✨
+                    </div>
+
+                    <h3>
+                        Dreams
+                    </h3>
+
+                    <p>
+                        Semoga semua impian yang kamu
+                        perjuangkan bisa menjadi nyata.
+                    </p>
+
+                </div>
+
+
+                <div class="wish-card">
+
+                    <div class="wish-icon pink">
+                        💗
+                    </div>
+
+                    <h3>
+                        Love
+                    </h3>
+
+                    <p>
+                        Semoga kamu selalu dikelilingi
+                        cinta dan orang-orang baik.
+                    </p>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- MEMORIES -->
+
+        <section class="memories section" id="memories">
+
+            <div class="section-heading">
+
+                <span class="eyebrow">
+                    📸 LITTLE MEMORIES
+                </span>
+
+                <h2>
+                    SAYANG 💙<br>
+                    <span>SLURUPPP!</span>
+                </h2>
+
+            </div>
+
+
+            <div class="gallery">
+
+                <div class="photo photo-large">
+                    <img src="assets/CUZZ6671.JPG" alt="Memory 1">
+
+                    <div class="photo-overlay">
+                        <span>01</span>
+                        <p>SAYANG NA AKU</p>
+                    </div>
+                </div>
+
+
+                <div class="photo">
+                    <img src="assets/ELRA8375.jpg" alt="Memory 2">
+
+                    <div class="photo-overlay">
+                        <span>02</span>
+                        <p>SAYANG NA AKU</p>
+                    </div>
+                </div>
+
+
+                <div class="photo">
+                    <img src="assets/KZAH5706.JPG" alt="Memory 3">
+
+                    <div class="photo-overlay">
+                        <span>03</span>
+                        <p>SAYANG NA AKU</p>
+                    </div>
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- TIMELINE -->
+
+        <section class="timeline-section section">
+
+            <div class="section-heading center">
+
+                <span class="eyebrow">
+                    🌙 YOUR JOURNEY
+                </span>
+
+                <h2>
+                    Another chapter<br>
+                    <span>begins today</span>
+                </h2>
+
+            </div>
+
+
+            <div class="timeline">
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        01
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            CHAPTER ONE
+                        </span>
+
+                        <h3>
+                            Semua berawal dari sini
+                        </h3>
+
+                        <p>
+                            Setiap perjalanan selalu dimulai
+                            dari sebuah langkah kecil.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        02
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            CHAPTER TWO
+                        </span>
+
+                        <h3>
+                            Banyak hal sudah dilewati
+                        </h3>
+
+                        <p>
+                            Ada tawa, air mata, kegagalan,
+                            keberhasilan, dan banyak cerita.
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="timeline-item">
+
+                    <div class="timeline-dot">
+                        03
+                    </div>
+
+                    <div class="timeline-content">
+
+                        <span>
+                            CHAPTER THREE
+                        </span>
+
+                        <h3>
+                            Now, a new chapter
+                        </h3>
+
+                        <p>
+                            Semoga halaman berikutnya menjadi
+                            salah satu bagian terbaik dalam hidupmu.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- SURPRISE -->
+
+        <section class="surprise section">
+
+            <div class="surprise-box">
+
+                <div class="surprise-decoration">
+                    ✦
+                </div>
+
+                <span class="eyebrow">
+                    🎁 ONE LAST THING
+                </span>
+
+                <h2>
+                    Ada satu kejutan<br>
+                    kecil untukmu...
+                </h2>
+
+                <p>
+                    Jangan lupa klik kotaknya.
+                </p>
+
+                <button
+                    class="gift-button"
+                    onclick="openGift()"
+                >
+                    <span class="gift-lid"></span>
+                    🎁
+                </button>
+
+                <div id="giftMessage" class="gift-message">
+
+                    <div class="gift-confetti">
+                        ✨ 🎉 ✨
+                    </div>
+
+                    <h3>
+                        YOU DESERVE ALL THE GOOD THINGS! 💙
+                    </h3>
+
+                    <p>
+                        Semoga hari ulang tahunmu menjadi
+                        awal dari banyak hal indah yang akan datang.
+                    </p>
+
+                    <strong>
+                        Happy Birthday saayangg! 🎂✨ <br>
+                        I LOVE YOUUU SO MUCHHHH 💙💙💙💙💙
+                    </strong>
+
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FINAL -->
+
+        <section class="final-section">
+
+            <div class="final-content">
+
+                <div class="final-cake">
+                    🎂
+                </div>
+
+                <span>
+                    HAPPY BIRTHDAY
+                </span>
+
+                <h2>
+                    Here's to another<br>
+                    beautiful year.
+                </h2>
+
+                <p>
+                    May it be filled with laughter,
+                    love, adventures and dreams coming true.
+                </p>
+
+                <div class="final-stars">
+                    ✦ ✧ ✦ ✧ ✦
+                </div>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- FOOTER -->
+
+        <footer>
+
+            <p>
+                Made with 💙 for <strong>MIFTAH</strong>
+            </p>
+
+            <span>
+                © 2026 Birthday Surprise
+            </span>
+
+        </footer>
+
+    </main>
+
+
+    <!-- CONFETTI CONTAINER -->
+
+    <div id="confettiContainer"></div>
+
+
+    <script src="script.js"></script>
+
+</body>
+</html>
